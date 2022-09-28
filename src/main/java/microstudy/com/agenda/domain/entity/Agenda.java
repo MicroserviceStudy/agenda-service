@@ -1,15 +1,21 @@
 package microstudy.com.agenda.domain.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-@Data
 @Entity
 @Table(name = "agenda")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Agenda {
 
     @Id
