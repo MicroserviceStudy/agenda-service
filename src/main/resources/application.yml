@@ -11,3 +11,7 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
