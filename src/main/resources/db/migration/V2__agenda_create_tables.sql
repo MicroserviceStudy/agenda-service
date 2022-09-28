@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS agenda;
+DROP TABLE IF EXISTS paciente;
+
+CREATE TABLE paciente
+(
+    id        serial PRIMARY KEY,
+    nome      varchar(50),
+    sobrenome varchar(100),
+    cpf       varchar(15),
+    email     varchar(100),
+    endereco varchar(255)
+);
+
+CREATE TABLE agenda
+(
+    id           serial PRIMARY KEY,
+    descricao    varchar(255),
+    data_hora    timestamp,
+    data_criacao timestamp,
+    paciente_id  integer,
+    CONSTRAINT fk_agenda_paciente FOREIGN KEY (paciente_id) REFERENCES paciente (id)
+);

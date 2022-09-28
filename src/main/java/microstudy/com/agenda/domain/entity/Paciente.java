@@ -22,5 +22,4 @@ public class Paciente {
     private String email;
 
     private String cpf;
-
 }
